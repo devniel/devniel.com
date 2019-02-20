@@ -1,0 +1,102 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "description": "Server side rendering project",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
+    "dev:build-server": "webpack --config webpack.server.js --watch",
+    "dev:build-client": "webpack --config webpack.client.js --watch",
+    "lint": "eslint src",
+    "lint:staged": "eslint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "bunyan": "^1.8.12",
+    "client-sessions": "^0.8.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^6.2.0",
+    "eslint-config-prettier": "^4.0.0",
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.5.1",
+    "graphql-query-test-mock": "^0.11.0",
+    "helmet": "^3.15.1",
+    "lodash": "^4.17.11",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^6.0.0",
+    "react-router": "^4.4.0-beta.6",
+    "react-router-config": "^4.4.0-beta.6",
+    "react-router-dom": "^4.4.0-beta.6",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "serialize-javascript": "^1.6.1",
+    "webpack": "^4.29.3",
+    "webpack-dev-middleware": "^3.6.0",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsdoc": "^4.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "lint-staged": "^8.1.4",
+    "nock": "^10.0.6",
+    "nodemon": "^1.18.10",
+    "npm-run-all": "^4.1.5",
+    "prettier-eslint": "^8.8.2",
+    "pretty-quick": "^1.10.0",
+    "webpack-cli": "^3.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "printWidth": 80,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn prettier:staged",
+      "yarn lint:staged",
+      "git add"
+    ],
+    "*.{css,md,scss}": [
+      "yarn prettier:staged",
+      "git add"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+# NPM
+npm-debug.log*
+.npm
+*.tgz
+package-lock.json
+
+# Yarn
+.yarn-integrity
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# ESLint cache
+.eslintcache
+
+# REPL history
+.node_repl_history
+
+# dotenv environment variables file
+.env
+
+# production
+build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# certificates
+certificates
