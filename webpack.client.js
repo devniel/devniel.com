@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require('webpack');
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 
@@ -6,19 +7,25 @@ const config = {
 
   // Tell webpack the root file of our
   // server application
-  entry: './src/client/client.js',
+  entry: {
+    'client' : [
+      'webpack-hot-middleware/client',
+      './src/client/client.js',
+    ]
+  },
 
   // Tell webpack where to put the output file
   // that is generated
   output: {
     filename: 'bundle.js',
+    publicPath: "",
     path: path.resolve(__dirname, 'public'),
   },
 
   module: {
     rules: [
       {
-        test: /\.mjsx?$/,
+        test: /\.m?jsx?$/,
         exclude: /(node_modules)/,
         use: [
           {
@@ -29,8 +36,6 @@ const config = {
               plugins: [
                 '@babel/plugin-transform-runtime',
                 'react-hot-loader/babel',
-                ['transform-es2015-arrow-functions', { spec: true }],
-                ['transform-class-properties', { spec: true }],
               ],
             },
           },
@@ -42,7 +47,7 @@ const config = {
       },
       {
         test: /\.pcss$|\.scss$/,
-        loader: 'style-loader!css-loader!postcss-loader?parser=postcss-scss',
+        loader: 'style-loader!css-loader!postcss-loader',
       },
 
       {
@@ -51,6 +56,12 @@ const config = {
       },
     ],
   },
+
+  plugins: [
+
+    new webpack.HotModuleReplacementPlugin(),
+
+  ]
 };
 
 module.exports = merge(baseConfig, config);

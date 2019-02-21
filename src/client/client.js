@@ -29,3 +29,7 @@ ReactDOM.hydrate(
   </Provider>,
   document.querySelector('#root'),
 );
+
+if(process.env.NODE_ENV === 'development' && module.hot) {
+  module.hot.accept();
+}

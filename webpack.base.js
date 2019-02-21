@@ -22,6 +22,7 @@ module.exports = {
       },
     ],
   },
+  
   resolve: {
     alias: {
       Client: path.resolve(__dirname, 'src/client/'),

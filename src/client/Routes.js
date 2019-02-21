@@ -1,5 +1,5 @@
 import App from './App';
-import HomePage from './pages/HomePage';
+import Home from './pages/Home';
 import UsersListPage from './pages/UsersListPage';
 import NotFoundPage from './pages/NotFoundPage';
 import AdminsListPage from './pages/AdminsListPage';
@@ -9,7 +9,7 @@ export default [
     ...App,
     routes: [
       {
-        ...HomePage,
+        ...Home,
         path: '/',
         exact: true,
       },

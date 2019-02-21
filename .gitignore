@@ -38,6 +38,10 @@ jspm_packages/
 # production
 build
 
+# hot updates
+public/*.hot-update.json
+public/*.hot-update.js
+
 # misc
 .DS_Store
 .env.local

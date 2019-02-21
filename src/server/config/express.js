@@ -30,35 +30,6 @@ export default (app) => {
     }),
   );
 
-  app.use(express.static('public'));
-
-  app.get('*', (req, res) => {
-    const store = createStore(req);
-    const promises = matchRoutes(Routes, req.path)
-      .map(({ route }) => (route.loadData ? route.loadData(store) : null))
-      .map((promise) => {
-        let p;
-        if (promise) {
-          p = new Promise((resolve) => {
-            promise.then(resolve).catch(resolve);
-          });
-        }
-        return p;
-      });
-
-    Promise.all(promises).then(() => {
-      const context = {};
-      const content = renderer(req, store, context);
-      if (context.url) {
-        return res.redirect(301, context.url);
-      }
-      if (context.notFound) {
-        res.status(404);
-      }
-      return res.send(content);
-    });
-  });
-
   app.disable('x-powered-by');
 
   app.use(helmet({
@@ -111,4 +82,35 @@ export default (app) => {
     }));
     app.use(webpackHotMiddleware(compiler));
   }
+
+
+  app.use(express.static('public'));
+
+  app.get('*', (req, res) => {
+    const store = createStore(req);
+    const promises = matchRoutes(Routes, req.path)
+      .map(({ route }) => (route.loadData ? route.loadData(store) : null))
+      .map((promise) => {
+        let p;
+        if (promise) {
+          p = new Promise((resolve) => {
+            promise.then(resolve).catch(resolve);
+          });
+        }
+        return p;
+      });
+
+    Promise.all(promises).then(() => {
+      const context = {};
+      const content = renderer(req, store, context);
+      if (context.url) {
+        return res.redirect(301, context.url);
+      }
+      if (context.notFound) {
+        res.status(404);
+      }
+      return res.send(content);
+    });
+  });
+
 };
