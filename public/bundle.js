@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "594b264a0a2bd2f54f85";
+/******/ 	var hotCurrentHash = "9534f8f21b93baf9a6f1";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -5955,7 +5955,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Home {\\n  background: #FAFAFA;\\n  width: 100%;\\n  height: 100vh;\\n  padding: 1.25rem;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: space-between; }\\n  .Home .Home__header {\\n    width: auto;\\n    display: table-cell;\\n    vertical-align: middle; }\\n    .Home .Home__header .Logo {\\n      display: table-cell;\\n      visibility: hidden; }\\n  .Home .Home__body {\\n    display: flex;\\n    align-items: center;\\n    justify-content: center; }\\n  .Home .Home__footer .Home__footer-left {\\n    font-size: 1.875rem;\\n    color: #13171A;\\n    font-weight: 300; }\\n  .Home .Logo {\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n    flex-direction: column; }\\n    .Home .Logo .Logo__title {\\n      font-size: 2.5rem;\\n      line-height: 2.5rem;\\n      font-weight: 300;\\n      color: #13171A;\\n      display: block; }\\n    .Home .Logo .Logo__subtitle {\\n      font-size: 15px;\\n      line-height: 1.25rem;\\n      font-weight: 300;\\n      color: #586772;\\n      display: block; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/client/pages/Home.scss?./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Home {\\n  background: #FAFAFA;\\n  width: 100%;\\n  height: 100vh;\\n  padding: 1.25rem;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: space-between; }\\n  .Home .Home__header {\\n    width: auto;\\n    display: table-cell;\\n    vertical-align: middle; }\\n    .Home .Home__header .Logo {\\n      display: table-cell;\\n      visibility: hidden; }\\n  .Home .Home__body {\\n    display: flex;\\n    align-items: center;\\n    justify-content: center; }\\n  .Home .Home__footer {\\n    display: flex;\\n    flex-direction: row;\\n    justify-content: space-between; }\\n    .Home .Home__footer .Home__footer-left {\\n      font-size: 1.875rem;\\n      color: #13171A;\\n      font-weight: 300; }\\n  .Home .Logo {\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n    flex-direction: column; }\\n    .Home .Logo .Logo__title {\\n      font-size: 2.5rem;\\n      line-height: 2.5rem;\\n      font-weight: 300;\\n      color: #13171A;\\n      display: block; }\\n    .Home .Logo .Logo__subtitle {\\n      font-size: 15px;\\n      line-height: 1.25rem;\\n      font-weight: 300;\\n      color: #586772;\\n      display: block; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/client/pages/Home.scss?./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -6618,7 +6618,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

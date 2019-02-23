@@ -2,7 +2,7 @@
   background: #FAFAFA;
   width: 100%;
   height: 100vh;
-  padding: 1.25rem;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,10 +25,38 @@
   }
 
   .Home__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     .Home__footer-left {
       font-size: 1.875rem;
       color: #13171A;
       font-weight: 300;
+    }
+
+    .Home__footer-right,
+    .Home__footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .Home__footer-link {
+
+        & +.Home__footer-link {
+          margin-left: 10px;
+        }
+
+        svg {
+          cursor: pointer;
+          fill: #D8D8D8;
+          width: 36px;
+          height: 36px;
+          &:hover{
+            fill: #13171A;
+          }
+        }
+      }
     }
   }
 

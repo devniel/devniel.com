@@ -70,7 +70,7 @@ const config = {
       },
 
       {
-        test: /\.(png|jpg|gif|woff2|woff|svg)$/,
+        test: /\.(png|jpg|gif|woff2|woff|svg|pdf)$/,
         //exclude: [/\.js$/, /\.html$/, /\.json$/],
         loader: 'file-loader',
         options: {
