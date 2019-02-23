@@ -60,6 +60,7 @@ module.exports = {
         map: [
           ['Client', path.resolve(__dirname, 'src/client/')],
           ['Server', path.resolve(__dirname, 'src/server/')],
+          ['Assets', path.resolve(__dirname, 'src/assets/')],
         ],
         extensions: ['.ts', '.js', '.jsx', '.json'],
       },

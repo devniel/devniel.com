@@ -20,6 +20,11 @@ const config = {
     path: path.resolve(__dirname, 'build'),
   },
 
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
+
   externals: [webpackNodeExternals()],
 
   module: {
@@ -46,7 +51,7 @@ const config = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
         ]
       },
 
@@ -54,14 +59,24 @@ const config = {
         test: /\.pcss$|\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader'
+          { loader: 'css-loader', 
+            options: { 
+              importLoaders: 1,
+              url: true
+            } 
+          },
+          'sass-loader'
         ]
       },
 
       {
-        test: /\.jpe?g$|\.gif$|\.png$/i,
+        test: /\.(png|jpg|gif|woff2|woff|svg)$/,
+        //exclude: [/\.js$/, /\.html$/, /\.json$/],
         loader: 'file-loader',
+        options: {
+          limit: 10000,
+          name: 'media/[name].[hash:8].[ext]',
+        }
       },
     ],
   },

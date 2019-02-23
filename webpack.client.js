@@ -1,7 +1,9 @@
 const path = require('path');
-var webpack = require('webpack');
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== 'production'
 
 const config = {
 
@@ -43,16 +45,33 @@ const config = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader',
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+        ]
       },
       {
         test: /\.pcss$|\.scss$/,
-        loader: 'style-loader!css-loader!postcss-loader',
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', 
+            options: { 
+              importLoaders: 1,
+              url: true 
+            } 
+          },
+          'sass-loader'
+        ]
       },
 
       {
-        test: /\.jpe?g$|\.gif$|\.png$/i,
+        test: /\.(png|jpg|gif|woff2|woff|svg)$/,
+        //exclude: [/\.js$/, /\.html$/, /\.json$/],
         loader: 'file-loader',
+        options: {
+          limit: 10000,
+          name: 'media/[name].[hash:8].[ext]',
+        }
       },
     ],
   },
@@ -60,6 +79,13 @@ const config = {
   plugins: [
 
     new webpack.HotModuleReplacementPlugin(),
+
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "style.css",
+      chunkFilename: "[id].css"
+    })
 
   ]
 };

@@ -1,7 +1,7 @@
 module.exports = {
   parser: 'postcss-scss',
   plugins: {
-    'postcss-smart-import': {},
+    'postcss-import': {},
     'postcss-preset-env': {},
     'precss': {}
   }

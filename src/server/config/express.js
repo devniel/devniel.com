@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
 import clientSessions from 'client-sessions';
 import cookieParser from 'cookie-parser';
+import path from 'path';
 
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
@@ -76,10 +77,22 @@ export default (app) => {
   }));
 
   if (process.env.NODE_ENV === 'development') {
+
+    // relative to build/bundle.js because it's run with node build/bundle.js
+    // __dirname returns the absolute path of the bundle.
+    webpackClientConfig.resolve = {
+      alias: { 
+        Client: path.join(__dirname, '../src/client'),
+        Server: path.join(__dirname, '../src/server'),
+        Assets: path.join(__dirname, '../src/assets')
+      } 
+    };
+  
     const compiler = webpack(webpackClientConfig);
-    app.use(webpackDevMiddleware(compiler, {
-      publicPath: webpackClientConfig.output.publicPath,
-    }));
+    const options = {
+      publicPath: webpackClientConfig.output.publicPath
+    };
+    app.use(webpackDevMiddleware(compiler, options));
     app.use(webpackHotMiddleware(compiler));
   }
 

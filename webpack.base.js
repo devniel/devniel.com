@@ -25,8 +25,9 @@ module.exports = {
   
   resolve: {
     alias: {
-      Client: path.resolve(__dirname, 'src/client/'),
-      Server: path.resolve(__dirname, 'src/server/'),
+      Client: path.resolve(__dirname, './src/client/'),
+      Server: path.resolve(__dirname, './src/server/'),
+      Assets: path.resolve(__dirname, './src/assets/'),
     },
   },
 };
