@@ -21,25 +21,23 @@ const store = createStore(
   applyMiddleware(thunk.withExtraArgument(axiosInstance))
 );
 
-ReactDOM.render(
+const r = (
   <Provider store={store}>
     <BrowserRouter>
       <div>{renderRoutes(Routes)}</div>
     </BrowserRouter>
-  </Provider>,
-  document.querySelector('#root')
+  </Provider>
 );
 
-export default () => {
-  ReactDOM.render(
-    <Provider store={store}>
-      <BrowserRouter>
-        <div>{renderRoutes(Routes)}</div>
-      </BrowserRouter>
-    </Provider>,
-    document.querySelector('#root')
-  );
+const render = () => {
+  if (process.env.STATIC === 'true')
+    ReactDOM.render(r, document.querySelector('#root'));
+  else ReactDOM.hydrate(r, document.querySelector('#root'));
 };
+
+render();
+
+export default render;
 
 if (process.env.NODE_ENV === 'development' && module.hot) {
   module.hot.accept();
