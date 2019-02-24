@@ -36,8 +36,8 @@ jspm_packages/
 .env
 
 # production
-/build
-/public
+build/
+public/
 
 # hot updates
 public/*.hot-update.json
