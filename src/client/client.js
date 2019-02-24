@@ -18,18 +18,29 @@ const axiosInstance = axios.create({
 const store = createStore(
   reducers,
   window.INITIAL_STATE,
-  applyMiddleware(thunk.withExtraArgument(axiosInstance)),
+  applyMiddleware(thunk.withExtraArgument(axiosInstance))
 );
 
-ReactDOM.hydrate(
+ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <div>{renderRoutes(Routes)}</div>
     </BrowserRouter>
   </Provider>,
-  document.querySelector('#root'),
+  document.querySelector('#root')
 );
 
-if(process.env.NODE_ENV === 'development' && module.hot) {
+export default () => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <div>{renderRoutes(Routes)}</div>
+      </BrowserRouter>
+    </Provider>,
+    document.querySelector('#root')
+  );
+};
+
+if (process.env.NODE_ENV === 'development' && module.hot) {
   module.hot.accept();
 }

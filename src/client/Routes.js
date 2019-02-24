@@ -1,8 +1,6 @@
 import App from './App';
 import Home from './pages/Home';
-import UsersListPage from './pages/UsersListPage';
 import NotFoundPage from './pages/NotFoundPage';
-import AdminsListPage from './pages/AdminsListPage';
 
 export default [
   {
@@ -12,14 +10,6 @@ export default [
         ...Home,
         path: '/',
         exact: true,
-      },
-      {
-        ...AdminsListPage,
-        path: '/admins',
-      },
-      {
-        ...UsersListPage,
-        path: '/users',
       },
       {
         ...NotFoundPage,
