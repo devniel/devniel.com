@@ -13,7 +13,7 @@ export default (req, store, context) => {
       <StaticRouter location={req.path} context={context}>
         <div>{renderRoutes(Routes)}</div>
       </StaticRouter>
-    </Provider>,
+    </Provider>
   );
 
   const helmet = Helmet.renderStatic();
@@ -23,6 +23,7 @@ export default (req, store, context) => {
       <head>
         ${helmet.title.toString()}
         ${helmet.meta.toString()}
+        ${helmet.link.toString()}
         <link rel="stylesheet" href="/style.css">
       </head>
       <body>

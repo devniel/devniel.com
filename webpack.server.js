@@ -2,7 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const webpackNodeExternals = require('webpack-node-externals');
 const baseConfig = require('./webpack.base');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   // Inform webpack that we're building a bundle
@@ -40,7 +40,7 @@ const config = {
               cacheDirectory: true,
               plugins: [
                 '@babel/plugin-transform-runtime',
-                'react-hot-loader/babel'
+                'react-hot-loader/babel',
               ],
             },
           },
@@ -52,31 +52,32 @@ const config = {
         use: [
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { importLoaders: 1 } },
-        ]
+        ],
       },
 
       {
         test: /\.pcss$|\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', 
-            options: { 
+          {
+            loader: 'css-loader',
+            options: {
               importLoaders: 1,
-              url: true
-            } 
+              url: true,
+            },
           },
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
 
       {
-        test: /\.(png|jpg|gif|woff2|woff|svg|pdf)$/,
+        test: /\.(png|jpg|gif|woff2|woff|svg|pdf|webmanifest)$/,
         //exclude: [/\.js$/, /\.html$/, /\.json$/],
         loader: 'file-loader',
         options: {
           limit: 10000,
           name: 'media/[name].[hash:8].[ext]',
-        }
+        },
       },
     ],
   },
@@ -85,11 +86,10 @@ const config = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
-  ]
-
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
 };
 
 module.exports = merge(baseConfig, config);
