@@ -30,9 +30,11 @@ const r = (
 );
 
 const render = () => {
-  if (process.env.STATIC === 'true')
-    ReactDOM.render(r, document.querySelector('#root'));
-  else ReactDOM.hydrate(r, document.querySelector('#root'));
+  const renderMethod =
+    module.hot || process.env.STATIC === 'true'
+      ? ReactDOM.render
+      : ReactDOM.hydrate;
+  renderMethod(r, document.querySelector('#root'));
 };
 
 render();

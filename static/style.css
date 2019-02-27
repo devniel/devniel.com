@@ -4384,6 +4384,46 @@ body {
   background-color: #fafafa;
 }
 
+.Dail {
+  width: auto;
+  max-width: 200px;
+  background: #fff;
+  border-radius: 100px;
+  padding: 5px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  color: #616161;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+  padding: 5px 20px 5px 5px;
+  line-height: 32px;
+}
+.Dail .Dail__image {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  background: #7fad7a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Dail .Dail__image .Dail__image-svg {
+  width: 30px;
+  height: 30px;
+}
+.Dail .Dail__image .Dail__image-svg div {
+  width: 100%;
+  height: 100%;
+}
+.Dail .Dail__image .Dail__image-svg svg {
+  width: 100%;
+  height: 100%;
+}
+.Dail .Dail__status {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
 .Home {
   background: #fafafa;
   width: 100%;
@@ -4392,6 +4432,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .Home .Home__header {
   width: auto;
@@ -4403,9 +4444,15 @@ body {
   visibility: hidden;
 }
 .Home .Home__body {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.Home .Home__body .Dail {
+  position: absolute;
+  top: 80px;
 }
 .Home .Home__footer {
   display: flex;

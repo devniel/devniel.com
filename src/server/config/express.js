@@ -19,7 +19,7 @@ import createStore from '../../helpers/createStore';
 
 import webpackClientConfig from '../../../webpack.client';
 
-export default (app) => {
+export default app => {
   app.use(
     '/api',
     proxy('http://react-ssr-api.herokuapp.com', {
@@ -28,19 +28,21 @@ export default (app) => {
         newOpts.headers['x-forwarded-host'] = 'localhost:3000';
         return newOpts;
       },
-    }),
+    })
   );
 
   app.disable('x-powered-by');
 
-  app.use(helmet({
-    xssFilter: true,
-    noSniff: true,
-    hsts: true,
-    frameguard: {
-      action: 'deny',
-    },
-  }));
+  app.use(
+    helmet({
+      xssFilter: true,
+      noSniff: true,
+      hsts: true,
+      frameguard: {
+        action: 'deny',
+      },
+    })
+  );
 
   // eslint-disable-next-line no-param-reassign
   app.locals.pretty = false;
@@ -66,36 +68,36 @@ export default (app) => {
   app.use(bodyParser.json({ limit: '500mb' }));
   app.use(bodyParser.urlencoded({ limit: '500mb', extended: true }));
 
-  app.use(clientSessions({
-    cookieName: process.env.SESSION_COOKIE_NAME,
-    requestKey: 'session',
-    secret: process.env.SESSION_SECRET,
-    cookie: {
-      httpOnly: true,
-      secureProxy: true,
-    },
-  }));
+  app.use(
+    clientSessions({
+      cookieName: process.env.SESSION_COOKIE_NAME,
+      requestKey: 'session',
+      secret: process.env.SESSION_SECRET,
+      cookie: {
+        httpOnly: true,
+        secureProxy: true,
+      },
+    })
+  );
 
   if (process.env.NODE_ENV === 'development') {
-
     // relative to build/bundle.js because it's run with node build/bundle.js
     // __dirname returns the absolute path of the bundle.
     webpackClientConfig.resolve = {
-      alias: { 
+      alias: {
         Client: path.join(__dirname, '../src/client'),
         Server: path.join(__dirname, '../src/server'),
-        Assets: path.join(__dirname, '../src/assets')
-      } 
+        Assets: path.join(__dirname, '../src/assets'),
+      },
     };
-  
+
     const compiler = webpack(webpackClientConfig);
     const options = {
-      publicPath: webpackClientConfig.output.publicPath
+      publicPath: webpackClientConfig.output.publicPath,
     };
     app.use(webpackDevMiddleware(compiler, options));
     app.use(webpackHotMiddleware(compiler));
   }
-
 
   app.use(express.static('public'));
 
@@ -103,10 +105,10 @@ export default (app) => {
     const store = createStore(req);
     const promises = matchRoutes(Routes, req.path)
       .map(({ route }) => (route.loadData ? route.loadData(store) : null))
-      .map((promise) => {
+      .map(promise => {
         let p;
         if (promise) {
-          p = new Promise((resolve) => {
+          p = new Promise(resolve => {
             promise.then(resolve).catch(resolve);
           });
         }
@@ -125,5 +127,4 @@ export default (app) => {
       return res.send(content);
     });
   });
-
 };

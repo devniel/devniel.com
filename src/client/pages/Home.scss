@@ -1,11 +1,12 @@
 .Home {
-  background: #FAFAFA;
+  background: #fafafa;
   width: 100%;
   height: 100vh;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 
   .Home__header {
     width: auto;
@@ -19,9 +20,17 @@
   }
 
   .Home__body {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    .Dail {
+      position: absolute;
+      top: 80px;
+    }
   }
 
   .Home__footer {
@@ -31,7 +40,7 @@
 
     .Home__footer-left {
       font-size: 1.875rem;
-      color: #13171A;
+      color: #13171a;
       font-weight: 300;
     }
 
@@ -42,18 +51,17 @@
       align-items: center;
 
       .Home__footer-link {
-
-        & +.Home__footer-link {
+        & + .Home__footer-link {
           margin-left: 10px;
         }
 
         svg {
           cursor: pointer;
-          fill: #D8D8D8;
+          fill: #d8d8d8;
           width: 36px;
           height: 36px;
-          &:hover{
-            fill: #13171A;
+          &:hover {
+            fill: #13171a;
           }
         }
       }
@@ -65,16 +73,16 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
-    .Logo__title{
+
+    .Logo__title {
       font-size: 2.5rem;
       line-height: 2.5rem;
       font-weight: 300;
-      color: #13171A;
+      color: #13171a;
       display: block;
     }
-  
-    .Logo__subtitle{
+
+    .Logo__subtitle {
       font-size: 15px;
       line-height: 1.25rem;
       font-weight: 300;
@@ -82,6 +90,4 @@
       display: block;
     }
   }
-  
-
 }
