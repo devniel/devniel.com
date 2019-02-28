@@ -5,6 +5,7 @@ import ReactSVG from 'react-svg';
 import { Helmet } from 'react-helmet';
 
 import Dail from '../components/Dail/Dail';
+import { getDail } from '../actions/Dail.actions';
 
 import './Home.scss';
 
@@ -21,6 +22,11 @@ import favicon16x16 from 'Assets/favicon/favicon-16x16.png';
 import siteManifest from 'Assets/favicon/site.webmanifest';
 
 export class Home extends Component {
+  onDailClick = () => {
+    const { dispatch } = this.props;
+    dispatch(getDail());
+  };
+
   render() {
     return (
       <div className="Home">
@@ -49,7 +55,7 @@ export class Home extends Component {
             <span className="Logo__title">devniel</span>
             <span className="Logo__subtitle">just hack</span>
           </div>
-          <Dail status="programming" />
+          <Dail status="programming" onClick={this.onDailClick} />
         </div>
 
         <div className="Home__footer">
