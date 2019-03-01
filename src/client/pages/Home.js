@@ -14,7 +14,7 @@ import linkedIcon from 'Assets/images/linkedin.svg';
 import twitterIcon from 'Assets/images/twitter.svg';
 import instagramIcon from 'Assets/images/instagram.svg';
 import resumeIcon from 'Assets/images/resume.svg';
-import resumeFile from 'Assets/files/Daniel_Flores_Resume_January_2019.pdf';
+import resumeFile from 'Assets/files/Daniel_Flores_Resume_2019_March.pdf';
 
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
 import favicon32x32 from 'Assets/favicon/favicon-32x32.png';
