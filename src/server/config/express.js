@@ -124,6 +124,7 @@ export default app => {
       if (context.notFound) {
         res.status(404);
       }
+
       return res.send(content);
     });
   });

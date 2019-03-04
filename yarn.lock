@@ -1197,11 +1197,6 @@
     "@svgr/plugin-svgo" "^4.0.3"
     loader-utils "^1.1.0"
 
-"@tanem/svg-injector@^2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-2.1.4.tgz#b804f1c78b5179365ae21061f119263acccbeb13"
-  integrity sha512-//NIrFl8G59OCHWEeMUcI/UI05/xtkHOu0kVrfJe3Zh13gtKKSkkSdlr2kZSJthFal2JvdMm3T3XBm8grbbRbw==
-
 "@types/node@*":
   version "11.9.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.9.5.tgz#011eece9d3f839a806b63973e228f85967b79ed3"
@@ -9440,15 +9435,6 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
-
-react-svg@^7.2.7:
-  version "7.2.7"
-  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-7.2.7.tgz#9d263357a676810521d4cca96d767ede9ee5e7dc"
-  integrity sha512-WMPjg/AlTsKmpVUVxBc6tJ01q4qVoAC45AHMXDgfUhaXP/t81TTlwxCq5AUzWDULtTa4AkM+l0Z8IVuFlM32uw==
-  dependencies:
-    "@babel/runtime" "^7.3.1"
-    "@tanem/svg-injector" "^2.1.4"
-    prop-types "^15.7.2"
 
 react-test-renderer@^16.0.0-0:
   version "16.8.3"
