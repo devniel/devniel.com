@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import ReactSVG from 'react-svg';
 import { Helmet } from 'react-helmet';
 
 import Dail from '../components/Dail/Dail';
@@ -9,11 +8,11 @@ import { getDail } from '../actions/Dail.actions';
 
 import './Home.scss';
 
-import githubIcon from 'Assets/images/github.svg';
-import linkedIcon from 'Assets/images/linkedin.svg';
-import twitterIcon from 'Assets/images/twitter.svg';
-import instagramIcon from 'Assets/images/instagram.svg';
-import resumeIcon from 'Assets/images/resume.svg';
+import GithubIcon from 'Assets/images/github.svg';
+import LinkedIcon from 'Assets/images/linkedin.svg';
+import TwitterIcon from 'Assets/images/twitter.svg';
+import InstagramIcon from 'Assets/images/instagram.svg';
+import ResumeIcon from 'Assets/images/resume.svg';
 import resumeFile from 'Assets/files/Daniel_Flores_Resume_2019_March.pdf';
 
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
@@ -69,27 +68,27 @@ export class Home extends Component {
             <div className="Home__footer-links">
               <div className="Home__footer-link">
                 <a href="https://github.com/devniel" title="Github">
-                  <ReactSVG src={githubIcon} />
+                  <GithubIcon />
                 </a>
               </div>
               <div className="Home__footer-link">
                 <a href={resumeFile} title="Resume">
-                  <ReactSVG src={resumeIcon} />
+                  <ResumeIcon />
                 </a>
               </div>
               <div className="Home__footer-link">
                 <a href="https://www.linkedin.com/in/devniel/" title="LinkedIn">
-                  <ReactSVG src={linkedIcon} />
+                  <LinkedIcon />
                 </a>
               </div>
               <div className="Home__footer-link" title="Twitter">
                 <a href="https://twitter.com/devniel">
-                  <ReactSVG src={twitterIcon} />
+                  <TwitterIcon />
                 </a>
               </div>
               <div className="Home__footer-link">
                 <a href="https://www.instagram.com/devniel_" title="Instagram">
-                  <ReactSVG src={instagramIcon} />
+                  <InstagramIcon />
                 </a>
               </div>
             </div>
@@ -106,5 +105,4 @@ function mapStateToProps({ admins }) {
 
 export default {
   component: connect(mapStateToProps)(Home),
-  loadData: ({ dispatch }) => dispatch(),
 };

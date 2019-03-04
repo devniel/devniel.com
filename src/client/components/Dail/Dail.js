@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import ReactSVG from 'react-svg';
 import Utils from '../../utils';
 import './Dail.scss';
-import dailIcon from 'Assets/dail/icon.svg';
+import DailIcon from 'Assets/dail/icon.svg';
 
 class Dail extends Component {
   render() {
@@ -16,7 +15,7 @@ class Dail extends Component {
         tabIndex={0}
         onKeyUp={e => Utils.isEnterKeyPress(e) && onClick()}>
         <div className="Dail__image">
-          <ReactSVG src={dailIcon} className="Dail__image-svg" />
+          <DailIcon />
         </div>
         <div className="Dail__status">{status}</div>
       </div>

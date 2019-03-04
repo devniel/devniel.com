@@ -1,6 +1,5 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
-import { fetchCurrentUser } from './actions';
 import { hot } from 'react-hot-loader/root';
 
 import './App.scss';
@@ -12,5 +11,4 @@ export default {
     process.env.NODE_ENV === 'development' && !process.env.STATIC
       ? hot(App)
       : App,
-  loadData: ({ dispatch }) => dispatch(fetchCurrentUser()),
 };

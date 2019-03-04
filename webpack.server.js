@@ -71,7 +71,23 @@ const config = {
       },
 
       {
-        test: /\.(png|jpg|gif|woff2|woff|svg|pdf|webmanifest)$/,
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: {
+                  removeViewBox: false,
+                },
+              },
+            },
+          },
+        ],
+      },
+
+      {
+        test: /\.(png|jpg|gif|woff2|woff|pdf|webmanifest)$/,
         //exclude: [/\.js$/, /\.html$/, /\.json$/],
         loader: 'file-loader',
         options: {
