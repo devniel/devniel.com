@@ -33,7 +33,7 @@ export class Home extends Component {
       <div className="Home">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>devniel – just hack</title>
+          <title>devniel ⏤ just hack</title>
           <link
             rel="apple-touch-icon"
             sizes="180x180"
