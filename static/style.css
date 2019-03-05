@@ -4407,15 +4407,15 @@ body {
   align-items: center;
   justify-content: center;
 }
-.Dail .Dail__image .Dail__image-svg {
+.Dail .Dail__image .svg {
   width: 30px;
   height: 30px;
 }
-.Dail .Dail__image .Dail__image-svg div {
+.Dail .Dail__image .svg div {
   width: 100%;
   height: 100%;
 }
-.Dail .Dail__image .Dail__image-svg svg {
+.Dail .Dail__image .svg svg {
   width: 100%;
   height: 100%;
 }

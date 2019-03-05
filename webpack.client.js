@@ -18,6 +18,8 @@ const config = {
     filename: 'bundle.js',
     publicPath: '',
     path: path.resolve(__dirname, 'public'),
+    hotUpdateChunkFilename: 'hot/client/hot-update.js',
+    hotUpdateMainFilename: 'hot/client/hot-update.json',
   },
 
   module: {

@@ -18,6 +18,8 @@ const config = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
+    hotUpdateChunkFilename: 'hot/server/hot-update.js',
+    hotUpdateMainFilename: 'hot/server/hot-update.json',
   },
 
   node: {

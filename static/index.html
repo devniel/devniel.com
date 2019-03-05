@@ -1,6 +1,89 @@
-<!DOCTYPE html><html><head>
-  <link href="style.css" rel="stylesheet"></head>
-  <body>
-    <div id="root"><div><div><div class="Home"><div class="Home__header"><div class="Logo"><span class="Logo__title">devniel</span><span class="Logo__subtitle">just hack</span></div></div><div class="Home__body"><div class="Logo"><span class="Logo__title">devniel</span><span class="Logo__subtitle">just hack</span></div><div class="Dail"><div class="Dail__image"><div class="Dail__image-svg"><div><div data-src="media/icon.svg" src=""></div></div></div></div><div class="Dail__status">programming</div></div></div><div class="Home__footer"><div class="Home__footer-left">a crafter building things with code<br>and full-stack engineer @<strong>IBM</strong>,<br>working on many products.</div><div class="Home__footer-right"><div class="Home__footer-links"><div class="Home__footer-link"><a href="https://github.com/devniel" title="Github"><div><div><div data-src="media/github.svg" src=""></div></div></div></a></div><div class="Home__footer-link"><a href="media/Daniel_Flores_Resume_January_2019.pdf" title="Resume"><div><div><div data-src="media/resume.svg" src=""></div></div></div></a></div><div class="Home__footer-link"><a href="https://www.linkedin.com/in/devniel/" title="LinkedIn"><div><div><div data-src="media/linkedin.svg" src=""></div></div></div></a></div><div class="Home__footer-link" title="Twitter"><a href="https://twitter.com/devniel"><div><div><div data-src="media/twitter.svg" src=""></div></div></div></a></div><div class="Home__footer-link"><a href="https://www.instagram.com/devniel_" title="Instagram"><div><div><div data-src="media/instagram.svg" src=""></div></div></div></a></div></div></div></div></div></div></div></div>
+<head><link href="style.css" rel="stylesheet"></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed (from ./node_modules/prerender-loader/dist/prerender-loader.js):
+  NonErrorEmittedError: (Emitted value instead of an instance of Error) TypeError: Cannot read pr  operty 'parentNode' of undefined
   
-<script src="bundle.js"></script></body></html>
+  - NormalModule.js:298 runLoaders
+    [web]/[webpack]/lib/NormalModule.js:298:13
+  
+  - LoaderRunner.js:367 
+    [web]/[loader-runner]/lib/LoaderRunner.js:367:11
+  
+  - LoaderRunner.js:233 
+    [web]/[loader-runner]/lib/LoaderRunner.js:233:18
+  
+  - LoaderRunner.js:111 context.callback
+    [web]/[loader-runner]/lib/LoaderRunner.js:111:13
+  
+  - prerender-loader.js:105 
+    [web]/[prerender-loader]/dist/prerender-loader.js:105:9
+  
+  
+  - NonErrorEmittedError: (Emitted value instead of an instance of Error) TypeError: Cannot read     property 'parentNode' of undefined
+  
+  - compiler.js:141 childCompiler.runAsChild
+    [web]/[html-webpack-plugin]/lib/compiler.js:141:18
+  
+  - Compiler.js:306 compile
+    [web]/[webpack]/lib/Compiler.js:306:11
+  
+  - Compiler.js:630 hooks.afterCompile.callAsync.err
+    [web]/[webpack]/lib/Compiler.js:630:14
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [web]/[tapable]/lib/Hook.js:154:20
+  
+  - Compiler.js:627 compilation.seal.err
+    [web]/[webpack]/lib/Compiler.js:627:30
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [web]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1325 hooks.optimizeAssets.callAsync.err
+    [web]/[webpack]/lib/Compilation.js:1325:35
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [web]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1316 hooks.optimizeChunkAssets.callAsync.err
+    [web]/[webpack]/lib/Compilation.js:1316:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [web]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1311 hooks.additionalAssets.callAsync.err
+    [web]/[webpack]/lib/Compilation.js:1311:36
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [web]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1307 hooks.optimizeTree.callAsync.err
+    [web]/[webpack]/lib/Compilation.js:1307:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [web]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1244 Compilation.seal
+    [web]/[webpack]/lib/Compilation.js:1244:27
+  
+  - Compiler.js:624 hooks.make.callAsync.err
+    [web]/[webpack]/lib/Compiler.js:624:17
+  
+  
+  - Compilation.js:1095 _addModuleChain
+    [web]/[webpack]/lib/Compilation.js:1095:12
+  
+  - Compilation.js:1007 processModuleDependencies.err
+    [web]/[webpack]/lib/Compilation.js:1007:9
+  
+  - next_tick.js:70 process.internalTickCallback
+    internal/process/next_tick.js:70:11
+  
+</pre><script src="bundle.js"></script>
