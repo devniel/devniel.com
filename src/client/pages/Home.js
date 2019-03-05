@@ -20,6 +20,12 @@ import resumeFile from 'Assets/files/Daniel_Flores_Resume_2019_March.pdf';
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
 import favicon32x32 from 'Assets/favicon/favicon-32x32.png';
 import favicon16x16 from 'Assets/favicon/favicon-16x16.png';
+
+// eslint-disable-next-line no-unused-vars
+import androidChrome192 from 'Assets/favicon/android-chrome-192x192.png';
+// eslint-disable-next-line no-unused-vars
+import androidChrome512 from 'Assets/favicon/android-chrome-512x512.png';
+
 import siteManifest from 'Assets/favicon/site.webmanifest';
 
 export class Home extends Component {
