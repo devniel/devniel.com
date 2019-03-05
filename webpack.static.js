@@ -78,7 +78,7 @@ const config = {
       },
 
       {
-        test: /\.(png|jpg|gif|woff2|woff|pdf|webmanifest)$/,
+        test: /\.(png|jpg|jpeg|gif|woff2|woff|pdf|webmanifest)$/,
         //exclude: [/\.js$/, /\.html$/, /\.json$/],
         loader: 'file-loader',
         options: {

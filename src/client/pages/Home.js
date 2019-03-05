@@ -13,6 +13,8 @@ import LinkedIcon from 'Assets/images/linkedin.svg';
 import TwitterIcon from 'Assets/images/twitter.svg';
 import InstagramIcon from 'Assets/images/instagram.svg';
 import ResumeIcon from 'Assets/images/resume.svg';
+// eslint-disable-next-line no-unused-vars
+import me from 'Assets/images/me.jpeg';
 import resumeFile from 'Assets/files/Daniel_Flores_Resume_2019_March.pdf';
 
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
