@@ -13,7 +13,8 @@ class App extends Component {
       !(
         navigator.userAgent.includes('Node.js') ||
         navigator.userAgent.includes('jsdom')
-      )
+      ) &&
+      !process.env.STATIC
     ) {
       ReactGA.initialize('UA-135606573-1');
       ReactGA.pageview(window.location.pathname + window.location.search);
