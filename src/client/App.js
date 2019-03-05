@@ -7,7 +7,16 @@ import './App.scss';
 
 class App extends Component {
   componentDidMount() {
-    ReactGA.initialize('UA-135606573-1');
+    // https://github.com/jsdom/jsdom/issues/1537#issuecomment-229405327
+    if (
+      typeof window !== 'undefined' &&
+      !(
+        navigator.userAgent.includes('Node.js') ||
+        navigator.userAgent.includes('jsdom')
+      )
+    ) {
+      ReactGA.initialize('UA-135606573-1');
+    }
   }
 
   render() {
