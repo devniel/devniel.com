@@ -4370,7 +4370,7 @@
 }
 
 html {
-  width: 100%;
+  width: 100vw;
 }
 
 body {
@@ -4380,8 +4380,15 @@ body {
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   background-color: #fafafa;
+}
+
+#root,
+.wrap {
+  height: 100%;
 }
 
 .Dail {
@@ -4427,7 +4434,7 @@ body {
 .Home {
   background: #fafafa;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -4489,7 +4496,7 @@ body {
 .Home .Home__footer .Home__footer-links .Home__footer-link svg:hover {
   fill: #13171a;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 320px), screen and (max-height: 700px) {
   .Home .Home__footer {
     flex-direction: column;
     text-align: center;
@@ -4502,7 +4509,20 @@ body {
     margin-top: 50px;
   }
 }
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (max-height: 500px) {
+  .Home .Home__footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .Home .Home__footer .Home__footer-left {
+    font-size: 0.7rem;
+    margin-top: 50px;
+  }
+  .Home .Home__footer .Home__footer-right {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) and (min-height: 700px) {
   .Home .Home__footer {
     flex-direction: column;
     text-align: center;

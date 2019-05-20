@@ -103,7 +103,7 @@ const config = {
 
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: '!!prerender-loader?string!index.html',
+      template: '!!prerender-loader?string!src/templates/index.html',
     }),
   ],
 };

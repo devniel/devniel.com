@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserView, MobileView } from 'react-device-detect';
@@ -6,25 +7,22 @@ import { Helmet } from 'react-helmet';
 import Dail from '../components/Dail/Dail';
 import { getDail } from '../actions/Dail.actions';
 
-import './Home.scss';
-
 import GithubIcon from 'Assets/images/github.svg';
 import TwitterIcon from 'Assets/images/twitter.svg';
 import ResumeIcon from 'Assets/images/resume.svg';
-// eslint-disable-next-line no-unused-vars
-import me from 'Assets/images/me.jpeg';
 import resumeFile from 'Assets/files/Daniel_Flores_Software-Engineer-IBM_Resume_2019_May.pdf';
-
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
 import favicon32x32 from 'Assets/favicon/favicon-32x32.png';
 import favicon16x16 from 'Assets/favicon/favicon-16x16.png';
 
-// eslint-disable-next-line no-unused-vars
+// To be consider on static build.
+import me from 'Assets/images/me.jpeg';
+import meSocial from 'Assets/images/me-social.png';
 import androidChrome192 from 'Assets/favicon/android-chrome-192x192.png';
-// eslint-disable-next-line no-unused-vars
 import androidChrome512 from 'Assets/favicon/android-chrome-512x512.png';
-
 import siteManifest from 'Assets/favicon/site.webmanifest';
+
+import './Home.scss';
 
 export class Home extends Component {
   onDailClick = () => {
