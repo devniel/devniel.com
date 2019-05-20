@@ -12,7 +12,6 @@ const log = Logger.child({
   module: './Engine.js',
 });
 
-
 export default class Engine {
   static get server() {
     return SERVER;
@@ -32,16 +31,22 @@ export default class Engine {
     const options = _options || {};
 
     const p = new Promise(async (fulfill, reject) => {
-      log.info({
-        options,
-      }, 'Engine.start()');
+      log.info(
+        {
+          options,
+        },
+        'Engine.start()'
+      );
 
       try {
         // Checking configuration...
 
-        log.info({
-          options,
-        }, 'Engine.start() | checking setup...');
+        log.info(
+          {
+            options,
+          },
+          'Engine.start() | checking setup...'
+        );
 
         Engine.check();
 
@@ -70,14 +75,15 @@ export default class Engine {
             cert: fs.readFileSync(process.env.SSL_CERT),
           };
           server = https.createServer(opts, server);
-          log.info(`Engine.start() | starting on port ${process.env.HTTPS_PORT}...`);
+          log.info(
+            `Engine.start() | starting on port ${process.env.HTTPS_PORT}...`
+          );
           await server.listen(process.env.HTTPS_PORT);
         } else {
           server = http.createServer(server);
           log.info(`Engine.start() | starting on port ${port}...`);
           await server.listen(port);
         }
-
         log.info('Engine started! ⏤  by IBM');
         return fulfill();
       } catch (e) {

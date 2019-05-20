@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { BrowserView, MobileView } from 'react-device-detect';
 import { Helmet } from 'react-helmet';
 
 import Dail from '../components/Dail/Dail';
@@ -13,7 +13,7 @@ import TwitterIcon from 'Assets/images/twitter.svg';
 import ResumeIcon from 'Assets/images/resume.svg';
 // eslint-disable-next-line no-unused-vars
 import me from 'Assets/images/me.jpeg';
-import resumeFile from 'Assets/files/Daniel_Flores_Resume_2019_May.pdf';
+import resumeFile from 'Assets/files/Daniel_Flores_Software-Engineer-IBM_Resume_2019_May.pdf';
 
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
 import favicon32x32 from 'Assets/favicon/favicon-32x32.png';
@@ -37,7 +37,7 @@ export class Home extends Component {
       <div className="Home">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>devniel ⏤ just hack</title>
+          <title>Daniel Flores ~ @devniel, making ideas happen.</title>
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -65,25 +65,48 @@ export class Home extends Component {
 
         <div className="Home__footer">
           <div className="Home__footer-left">
-            a crafter building things with code
-            <br />
-            and full-stack engineer @<strong>IBM</strong>,<br />
-            working on many products.
+            <BrowserView>
+              A crafter building things with code
+              <br />
+              and full-stack software engineer @<strong>IBM</strong>;
+              <br />
+              from <em>GraphQL</em> with <em>TypeScript</em> and <em>Node</em>{' '}
+              development,
+              <br />
+              to conversational bots with <em>IBM Watson</em> on mobile
+              experiences
+              <br /> built with <em>React Native</em> or desktop clients with{' '}
+              <em>Electron</em>.
+            </BrowserView>
+            <MobileView>
+              A crafter building things with code and full-stack software
+              engineer @<strong>IBM</strong>; from <em>GraphQL</em> with{' '}
+              <em>TypeScript</em> and <em>Node</em> development, to
+              conversational bots with <em>IBM Watson</em> on mobile experiences
+              built with <em>React Native</em> or desktop clients with{' '}
+              <em>Electron</em>.
+            </MobileView>
           </div>
           <div className="Home__footer-right">
             <div className="Home__footer-links">
               <div className="Home__footer-link">
-                <a href="https://github.com/devniel" title="Github">
+                <a
+                  href="https://github.com/devniel"
+                  title="my github"
+                  target="_blank">
                   <GithubIcon />
                 </a>
               </div>
               <div className="Home__footer-link">
-                <a href={resumeFile} title="Resume">
+                <a href={resumeFile} title="my resume" target="_blank">
                   <ResumeIcon />
                 </a>
               </div>
-              <div className="Home__footer-link" title="Twitter">
-                <a href="https://twitter.com/devniel">
+              <div className="Home__footer-link">
+                <a
+                  href="https://twitter.com/devniel"
+                  title="my twitter"
+                  target="_blank">
                   <TwitterIcon />
                 </a>
               </div>

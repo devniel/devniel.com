@@ -4,12 +4,14 @@ const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   // Tell webpack the root file of our
   // server application
   entry: {
-    client: ['webpack-hot-middleware/client', './src/client/client.js'],
+    //client: ['webpack-hot-middleware/client', './src/client/client.js'],
+    client: ['./src/client/client.js'],
   },
 
   // Tell webpack where to put the output file
@@ -18,9 +20,19 @@ const config = {
     filename: 'bundle.js',
     publicPath: '',
     path: path.resolve(__dirname, 'public'),
-    hotUpdateChunkFilename: 'hot/client/hot-update.js',
-    hotUpdateMainFilename: 'hot/client/hot-update.json',
+    //hotUpdateChunkFilename: 'hot/client/hot-update.js',
+    //hotUpdateMainFilename: 'hot/client/hot-update.json',
   },
+
+  devServer: devMode
+    ? {
+        port: 3000,
+        contentBase: './public',
+        hot: true,
+        overlay: true,
+        historyApiFallback: true,
+      }
+    : undefined,
 
   module: {
     rules: [
@@ -100,6 +112,17 @@ const config = {
       filename: 'style.css',
       chunkFilename: '[id].css',
     }),
+
+    // Generates an `index.html` file with the <script> injected.
+    devMode
+      ? new HtmlWebpackPlugin({
+          inject: true,
+          template: './public/index.html',
+          environment: {
+            NODE_ENV: process.env.NODE_ENV || 'development',
+          },
+        })
+      : undefined,
   ],
 };
 

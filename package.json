@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest --watch",
-    "dev": "npm-run-all --parallel dev:*",
+    "dev": "webpack-dev-server --open --config webpack.client.js --watch",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
@@ -46,6 +46,7 @@
     "postcss-import": "^12.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.1",
+    "react-device-detect": "^1.6.2",
     "react-dom": "^16.8.1",
     "react-ga": "^2.5.7",
     "react-helmet": "^5.2.0",
@@ -65,8 +66,7 @@
     "webpack-dev-server": "^3.1.14",
     "webpack-hot-middleware": "^2.24.3",
     "webpack-merge": "^4.2.1",
-    "webpack-node-externals": "^1.7.2",
-    "x": "^0.1.2"
+    "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
