@@ -24,7 +24,7 @@ const store = createStore(
 const r = (
   <Provider store={store}>
     <BrowserRouter>
-      <div>{renderRoutes(Routes)}</div>
+      <div className="wrap">{renderRoutes(Routes)}</div>
     </BrowserRouter>
   </Provider>
 );

@@ -189,7 +189,8 @@ exports[`Home HOC should render correctly 1`] = `
                 <em>
                   Node
                 </em>
-                 development,
+                 
+                development,
                 <br />
                 to conversational bots with 
                 <em>
@@ -201,7 +202,8 @@ exports[`Home HOC should render correctly 1`] = `
                 <em>
                   React Native
                 </em>
-                 or desktop clients with 
+                 or desktop clients with
+                 
                 <em>
                   Electron
                 </em>

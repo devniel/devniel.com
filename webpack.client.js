@@ -31,6 +31,7 @@ const config = {
         hot: true,
         overlay: true,
         historyApiFallback: true,
+        disableHostCheck: true,
       }
     : undefined,
 
