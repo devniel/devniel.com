@@ -9,13 +9,11 @@ import { getDail } from '../actions/Dail.actions';
 import './Home.scss';
 
 import GithubIcon from 'Assets/images/github.svg';
-import LinkedIcon from 'Assets/images/linkedin.svg';
 import TwitterIcon from 'Assets/images/twitter.svg';
-import InstagramIcon from 'Assets/images/instagram.svg';
 import ResumeIcon from 'Assets/images/resume.svg';
 // eslint-disable-next-line no-unused-vars
 import me from 'Assets/images/me.jpeg';
-import resumeFile from 'Assets/files/Daniel_Flores_Resume_2019_03.pdf';
+import resumeFile from 'Assets/files/Daniel_Flores_Resume_2019_May.pdf';
 
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
 import favicon32x32 from 'Assets/favicon/favicon-32x32.png';
@@ -62,7 +60,7 @@ export class Home extends Component {
             <span className="Logo__title">devniel</span>
             <span className="Logo__subtitle">just hack</span>
           </div>
-          <Dail status="programming" onClick={this.onDailClick} />
+          <Dail status="making ideas happen" onClick={this.onDailClick} />
         </div>
 
         <div className="Home__footer">
@@ -84,19 +82,9 @@ export class Home extends Component {
                   <ResumeIcon />
                 </a>
               </div>
-              <div className="Home__footer-link">
-                <a href="https://www.linkedin.com/in/devniel/" title="LinkedIn">
-                  <LinkedIcon />
-                </a>
-              </div>
               <div className="Home__footer-link" title="Twitter">
                 <a href="https://twitter.com/devniel">
                   <TwitterIcon />
-                </a>
-              </div>
-              <div className="Home__footer-link">
-                <a href="https://www.instagram.com/devniel_" title="Instagram">
-                  <InstagramIcon />
                 </a>
               </div>
             </div>

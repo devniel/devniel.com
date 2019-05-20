@@ -14,5 +14,6 @@ module.exports = {
     'Server(.*)$': '<rootDir>/src/server/$1',
     'Assets(.*)$': '<rootDir>/src/assets/$1',
   },
+  testMatch: ['**/__tests__/**/*.test.js?(x)', '**/?(*.)+(spec|test).js?(x)'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
 };

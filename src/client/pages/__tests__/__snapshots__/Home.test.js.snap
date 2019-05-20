@@ -139,7 +139,7 @@ exports[`Home HOC should render correctly 1`] = `
           </div>
           <Dail
             onClick={[Function]}
-            status="programming"
+            status="making ideas happen"
           >
             <div
               className="Dail"
@@ -151,27 +151,12 @@ exports[`Home HOC should render correctly 1`] = `
               <div
                 className="Dail__image"
               >
-                <ReactSVG
-                  className="Dail__image-svg"
-                  evalScripts="never"
-                  fallback={null}
-                  loading={null}
-                  onInjected={[Function]}
-                  renumerateIRIElements={true}
-                  src="icon.svg"
-                  svgClassName={null}
-                  svgStyle={Object {}}
-                  wrapper="div"
-                >
-                  <div
-                    className="Dail__image-svg"
-                  />
-                </ReactSVG>
+                <icon.svg />
               </div>
               <div
                 className="Dail__status"
               >
-                programming
+                making ideas happen
               </div>
             </div>
           </Dail>
@@ -205,63 +190,17 @@ exports[`Home HOC should render correctly 1`] = `
                   href="https://github.com/devniel"
                   title="Github"
                 >
-                  <ReactSVG
-                    evalScripts="never"
-                    fallback={null}
-                    loading={null}
-                    onInjected={[Function]}
-                    renumerateIRIElements={true}
-                    src="github.svg"
-                    svgClassName={null}
-                    svgStyle={Object {}}
-                    wrapper="div"
-                  >
-                    <div />
-                  </ReactSVG>
+                  <github.svg />
                 </a>
               </div>
               <div
                 className="Home__footer-link"
               >
                 <a
-                  href="Daniel_Flores_Resume_January_2019.pdf"
+                  href="Daniel_Flores_Resume_2019_May.pdf"
                   title="Resume"
                 >
-                  <ReactSVG
-                    evalScripts="never"
-                    fallback={null}
-                    loading={null}
-                    onInjected={[Function]}
-                    renumerateIRIElements={true}
-                    src="resume.svg"
-                    svgClassName={null}
-                    svgStyle={Object {}}
-                    wrapper="div"
-                  >
-                    <div />
-                  </ReactSVG>
-                </a>
-              </div>
-              <div
-                className="Home__footer-link"
-              >
-                <a
-                  href="https://www.linkedin.com/in/devniel/"
-                  title="LinkedIn"
-                >
-                  <ReactSVG
-                    evalScripts="never"
-                    fallback={null}
-                    loading={null}
-                    onInjected={[Function]}
-                    renumerateIRIElements={true}
-                    src="linkedin.svg"
-                    svgClassName={null}
-                    svgStyle={Object {}}
-                    wrapper="div"
-                  >
-                    <div />
-                  </ReactSVG>
+                  <resume.svg />
                 </a>
               </div>
               <div
@@ -271,41 +210,7 @@ exports[`Home HOC should render correctly 1`] = `
                 <a
                   href="https://twitter.com/devniel"
                 >
-                  <ReactSVG
-                    evalScripts="never"
-                    fallback={null}
-                    loading={null}
-                    onInjected={[Function]}
-                    renumerateIRIElements={true}
-                    src="twitter.svg"
-                    svgClassName={null}
-                    svgStyle={Object {}}
-                    wrapper="div"
-                  >
-                    <div />
-                  </ReactSVG>
-                </a>
-              </div>
-              <div
-                className="Home__footer-link"
-              >
-                <a
-                  href="https://www.instagram.com/devniel_"
-                  title="Instagram"
-                >
-                  <ReactSVG
-                    evalScripts="never"
-                    fallback={null}
-                    loading={null}
-                    onInjected={[Function]}
-                    renumerateIRIElements={true}
-                    src="instagram.svg"
-                    svgClassName={null}
-                    svgStyle={Object {}}
-                    wrapper="div"
-                  >
-                    <div />
-                  </ReactSVG>
+                  <twitter.svg />
                 </a>
               </div>
             </div>
