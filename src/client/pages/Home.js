@@ -11,6 +11,8 @@ import GithubIcon from 'Assets/images/github.svg';
 import TwitterIcon from 'Assets/images/twitter.svg';
 import ResumeIcon from 'Assets/images/resume.svg';
 import InstagramIcon from 'Assets/images/instagram.svg';
+import LinkedInIcon from 'Assets/images/linkedin.svg';
+
 import resumeFile from 'Assets/files/Daniel_Flores_Software-Engineer-IBM_Resume_2019_May.pdf';
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
 import favicon32x32 from 'Assets/favicon/favicon-32x32.png';
@@ -115,6 +117,14 @@ export class Home extends Component {
                   title="my instagram"
                   target="_blank">
                   <InstagramIcon />
+                </a>
+              </div>
+              <div className="Home__footer-link">
+                <a
+                  href="https://www.linkedin.com/in/devniel/"
+                  title="my linkedin"
+                  target="_blank">
+                  <LinkedInIcon />
                 </a>
               </div>
             </div>
