@@ -12,17 +12,14 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: [
-            [
-              '@babel/preset-env',
-              { targets: { node: 'current' } },
-            ],
+            ['@babel/preset-env', { targets: { node: 'current' } }],
             '@babel/preset-react',
           ],
         },
       },
     ],
   },
-  
+
   resolve: {
     alias: {
       Client: path.resolve(__dirname, './src/client/'),
