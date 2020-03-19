@@ -52,14 +52,14 @@ export class Home extends Component {
         <div className="Home__header">
           <div className="Logo">
             <span className="Logo__title">devniel</span>
-            <span className="Logo__subtitle">just hack</span>
+            <span className="Logo__subtitle">Daniel Flores</span>
           </div>
         </div>
 
         <div className="Home__body">
           <div className="Logo">
             <span className="Logo__title">devniel</span>
-            <span className="Logo__subtitle">just hack</span>
+            <span className="Logo__subtitle">Daniel Flores</span>
           </div>
           <Dail status="making ideas happen" onClick={this.onDailClick} />
         </div>
@@ -69,23 +69,13 @@ export class Home extends Component {
             <BrowserView>
               A crafter building things with code
               <br />
-              and full-stack software engineer @<strong>IBM</strong>;
-              <br />
-              from <em>GraphQL</em> with <em>TypeScript</em> and <em>Node</em>{' '}
-              development,
-              <br />
-              to conversational bots with <em>IBM Watson</em> on mobile
-              experiences
-              <br /> built with <em>React Native</em> or desktop clients with{' '}
-              <em>Electron</em>.
+              and full-stack software engineer @<strong>Criteo</strong>;<br />
+              previously @<strong>IBM</strong>.
             </BrowserView>
             <MobileView>
               A crafter building things with code and full-stack software
-              engineer @<strong>IBM</strong>; from <em>GraphQL</em> with{' '}
-              <em>TypeScript</em> and <em>Node</em> development, to
-              conversational bots with <em>IBM Watson</em> on mobile experiences
-              built with <em>React Native</em> or desktop clients with{' '}
-              <em>Electron</em>.
+              engineer @<strong>Criteo</strong>; previously @
+              <strong>IBM</strong>.<br />
             </MobileView>
           </div>
           <div className="Home__footer-right">

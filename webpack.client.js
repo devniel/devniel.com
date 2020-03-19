@@ -118,7 +118,7 @@ const config = {
     devMode
       ? new HtmlWebpackPlugin({
           inject: true,
-          template: './public/index.html',
+          template: './src/templates/index.html',
           environment: {
             NODE_ENV: process.env.NODE_ENV || 'development',
           },
