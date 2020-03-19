@@ -2,7 +2,7 @@
 //import { QueryMock } from './queryMock';
 
 describe('Auth', () => {
-  describe('signin()', async () => {
+  describe('signin()', () => {
     it('should signin an user', async () => {});
   });
 });
