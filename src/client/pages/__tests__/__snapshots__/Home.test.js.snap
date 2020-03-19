@@ -116,7 +116,7 @@ exports[`Home HOC should render correctly 1`] = `
             <span
               className="Logo__subtitle"
             >
-              just hack
+              Daniel Flores
             </span>
           </div>
         </div>
@@ -134,7 +134,7 @@ exports[`Home HOC should render correctly 1`] = `
             <span
               className="Logo__subtitle"
             >
-              just hack
+              Daniel Flores
             </span>
           </div>
           <Dail
@@ -173,40 +173,14 @@ exports[`Home HOC should render correctly 1`] = `
                 <br />
                 and full-stack software engineer @
                 <strong>
-                  IBM
+                  Criteo
                 </strong>
                 ;
                 <br />
-                from 
-                <em>
-                  GraphQL
-                </em>
-                 with 
-                <em>
-                  TypeScript
-                </em>
-                 and 
-                <em>
-                  Node
-                </em>
-                 
-                development,
-                <br />
-                to conversational bots with 
-                <em>
-                  IBM Watson
-                </em>
-                 on mobile experiences
-                <br />
-                 built with 
-                <em>
-                  React Native
-                </em>
-                 or desktop clients with
-                 
-                <em>
-                  Electron
-                </em>
+                previously @
+                <strong>
+                  IBM
+                </strong>
                 .
               </div>
             </BrowserView>
@@ -249,6 +223,28 @@ exports[`Home HOC should render correctly 1`] = `
                   title="my twitter"
                 >
                   <twitter.svg />
+                </a>
+              </div>
+              <div
+                className="Home__footer-link"
+              >
+                <a
+                  href="https://instagram.com/devniel_/"
+                  target="_blank"
+                  title="my instagram"
+                >
+                  <instagram.svg />
+                </a>
+              </div>
+              <div
+                className="Home__footer-link"
+              >
+                <a
+                  href="https://www.linkedin.com/in/devniel/"
+                  target="_blank"
+                  title="my linkedin"
+                >
+                  <linkedin.svg />
                 </a>
               </div>
             </div>

@@ -24,7 +24,7 @@
     "@devniel/graphql-query-test-mock": "^0.11.0",
     "@ibm/plex": "^1.2.3",
     "@svgr/webpack": "^4.1.0",
-    "axios": "^0.18.0",
+    "axios": "^0.19.2",
     "body-parser": "^1.18.3",
     "bunyan": "^1.8.12",
     "client-sessions": "^0.8.0",
@@ -59,7 +59,7 @@
     "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
-    "serialize-javascript": "^1.6.1",
+    "serialize-javascript": ">=2.1.1",
     "sinon": "^7.2.5",
     "webpack": "^4.29.3",
     "webpack-dev-middleware": "^3.6.0",
@@ -69,7 +69,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-transform-regenerator": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
@@ -94,7 +94,7 @@
     "eslint-plugin-react": "^7.12.4",
     "html-webpack-plugin": "^4.0.0-beta.5",
     "husky": "^1.3.1",
-    "jest": "^24.1.0",
+    "jest": "^25.1.0",
     "jest-extended": "^0.11.1",
     "lint-staged": "^8.1.4",
     "mini-css-extract-plugin": "^0.5.0",
@@ -111,6 +111,17 @@
     "pretty-quick": "^1.10.0",
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.2.3"
+  },
+  "resolutions": {
+    "**/**/minimist": "^1.2.5",
+    "**/**/set-value": "^2.0.1",
+    "**/**/acorn": "^6.4.1",
+    "**/**/mixin-deep": "^1.3.2",
+    "**/**/eslint-utils": "^1.4.1",
+    "**/**/lodash.template": "^4.5.0",
+    "**/**/lodash.merge": "^4.6.2",
+    "**/**/js-yaml": "^3.13.1"
+
   },
   "husky": {
     "hooks": {
