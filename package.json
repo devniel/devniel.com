@@ -38,7 +38,7 @@
     "file-loader": "^3.0.1",
     "graphql-query-test-mock": "^0.11.0",
     "helmet": "^3.15.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "method-override": "^3.0.0",
     "morgan": "^1.9.1",
     "node-sass": "^4.13.1",
