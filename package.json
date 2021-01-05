@@ -24,7 +24,7 @@
     "@devniel/graphql-query-test-mock": "^0.11.0",
     "@ibm/plex": "^1.2.3",
     "@svgr/webpack": "^4.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "body-parser": "^1.18.3",
     "bunyan": "^1.8.12",
     "client-sessions": "^0.8.0",
