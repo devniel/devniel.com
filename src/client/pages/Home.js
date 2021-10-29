@@ -103,7 +103,7 @@ export class Home extends Component {
               </div>
               <div className="Home__footer-link">
                 <a
-                  href="https://instagram.com/devniel_/"
+                  href="https://instagram.com/daniel.aujourdhui/"
                   title="my instagram"
                   target="_blank">
                   <InstagramIcon />
