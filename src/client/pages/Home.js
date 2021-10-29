@@ -38,7 +38,7 @@ export class Home extends Component {
       <div className="Home">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Daniel Flores ~ @devniel, making ideas happen.</title>
+          <title>Daniel Mauricio Flores ~ @devniel, making ideas happen.</title>
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -52,14 +52,14 @@ export class Home extends Component {
         <div className="Home__header">
           <div className="Logo">
             <span className="Logo__title">devniel</span>
-            <span className="Logo__subtitle">Daniel Flores</span>
+            <span className="Logo__subtitle">Daniel Mauricio Flores</span>
           </div>
         </div>
 
         <div className="Home__body">
           <div className="Logo">
             <span className="Logo__title">devniel</span>
-            <span className="Logo__subtitle">Daniel Flores</span>
+            <span className="Logo__subtitle">Daniel Mauricio Flores</span>
           </div>
           <Dail status="making ideas happen" onClick={this.onDailClick} />
         </div>
