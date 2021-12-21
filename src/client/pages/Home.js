@@ -88,11 +88,13 @@ export class Home extends Component {
                   <GithubIcon />
                 </a>
               </div>
+              {/*
               <div className="Home__footer-link">
                 <a href={resumeFile} title="my resume" target="_blank">
                   <ResumeIcon />
                 </a>
               </div>
+              */}
               <div className="Home__footer-link">
                 <a
                   href="https://twitter.com/devniel"
@@ -101,6 +103,7 @@ export class Home extends Component {
                   <TwitterIcon />
                 </a>
               </div>
+              {/*
               <div className="Home__footer-link">
                 <a
                   href="https://instagram.com/daniel.aujourdhui/"
@@ -109,6 +112,7 @@ export class Home extends Component {
                   <InstagramIcon />
                 </a>
               </div>
+              */}
               <div className="Home__footer-link">
                 <a
                   href="https://www.linkedin.com/in/devniel/"
