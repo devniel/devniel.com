@@ -99,7 +99,14 @@ export default app => {
     app.use(webpackHotMiddleware(compiler));
   }
 
-  app.use(express.static('public'));
+  app.use(
+    express.static('public', {
+      index: false,
+      setHeaders: function(res) {
+        res.set('X-Robots-Tag', 'noindex');
+      },
+    })
+  );
 
   app.get('*', (req, res) => {
     const store = createStore(req);
