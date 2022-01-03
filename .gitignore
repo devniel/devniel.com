@@ -38,6 +38,7 @@ jspm_packages/
 # production
 build/
 public/
+static/
 
 # hot updates
 public/*.hot-update.json
