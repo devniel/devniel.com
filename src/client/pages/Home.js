@@ -12,6 +12,7 @@ import TwitterIcon from 'Assets/images/twitter.svg';
 import ResumeIcon from 'Assets/images/resume.svg';
 import InstagramIcon from 'Assets/images/instagram.svg';
 import LinkedInIcon from 'Assets/images/linkedin.svg';
+import BookIcon from 'Assets/images/book.svg';
 
 import resumeFile from 'Assets/files/Daniel_Flores_Software-Engineer-IBM_Resume_2019_May.pdf';
 import faviconAppleTouchIcon from 'Assets/favicon/apple-touch-icon.png';
@@ -80,6 +81,14 @@ export class Home extends Component {
           </div>
           <div className="Home__footer-right">
             <div className="Home__footer-links">
+              <div className="Home__footer-link">
+                <a
+                  href="https://texts.devniel.com"
+                  title="my texts"
+                  target="_blank">
+                  <BookIcon />
+                </a>
+              </div>
               <div className="Home__footer-link">
                 <a
                   href="https://github.com/devniel"
