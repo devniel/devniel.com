@@ -127,7 +127,7 @@ function Resume() {
       title: 'Software Engineer',
       logo: logoIBM,
       start: 'May 2014',
-      end: 'December 2020',
+      end: 'December 2019',
     },
   ]
 
