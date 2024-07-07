@@ -210,7 +210,7 @@ export default async function Home() {
               </p>
 
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                Lately, I'm playing with 🔮 Generative AI (LLMs, ComfyUI, Stable
+                Lately, I&apos;m playing with 🔮 Generative AI (LLMs, ComfyUI, Stable
                 Difussion, Midjourney, RunwayML) and my latest experiment was
                 about generation of dashboards using text prompts ✨.
               </p>
@@ -224,7 +224,7 @@ export default async function Home() {
                 <a href="https://ibm.com" className="text-blue-500">
                   <strong>IBM</strong>
                 </a>
-                . <br /> I'm peruvian 🇵🇪 and based in Paris 🇫🇷 since 2020.
+                . <br /> I&apos;m peruvian 🇵🇪 and based in Paris 🇫🇷 since 2020.
               </p>
               <div className="mt-6 flex gap-6">
                 <SocialLink
