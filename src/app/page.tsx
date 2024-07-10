@@ -211,7 +211,7 @@ export default async function Home() {
 
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 Lately, I&apos;m playing with 🔮 Generative AI (LLMs, ComfyUI, Stable
-                Difussion, Midjourney, RunwayML) and my latest experiment was
+                Diffusion, Midjourney, RunwayML) and my latest experiment was
                 about generation of dashboards using text prompts ✨.
               </p>
 
