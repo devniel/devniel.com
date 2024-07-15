@@ -193,38 +193,27 @@ export default async function Home() {
                 ex: CRITEO, IBM.
               </h2>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                Hi, I’m <strong>Daniel</strong>, a product-oriented full-stack
-                software engineer.
+                🔮 Looking for new challenges around AI starting Q4 2024. Currently
+                working on personal projects around Generative AI, contributing to
+                open source projects on Github and studying for interviews; please, follow
+                me on Twitter as I try to build in public: <a  href="https://x.com/devniel/" aria-label="Follow me on Twitter" className="text-blue-500">@devniel</a>.
+              </p>
+              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">⎯</p>
+              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+                Hi, I’m a product-oriented full-stack software engineer.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                🎨 For front-end, I have mainly developed using React, Angular,
-                Next.js, Java (Android, JSP), SAP OpenUI5, TypeScript,
-                JavaScript, jQuery (yes, the good old school), HTML/CSS,
-                Cypress, Jest, Playwright and others.{' '}
-              </p>
-              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                ⚙️ For back-end, I have mainly used Node.js (Express, Nest.js),
-                Python (Flask, Django), Scala (Play Framework, http4s), Java
-                (Play Framework, Servlets), C#, PHP, Docker, Gradle, CI/CD tools
-                and others.
-              </p>
-
-              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                Lately, I&apos;m playing with 🔮 Generative AI (LLMs, ComfyUI, Stable
-                Diffusion, Midjourney, RunwayML) and my latest experiment was
-                about generation of dashboards using text prompts ✨.
-              </p>
-
-              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                I worked 4.5 years for{' '}
-                <a href="https://criteo.com" className="text-orange-500">
+                🧢 At <a href="https://criteo.com" className="text-orange-500">
                   <strong>CRITEO</strong>
-                </a>{' '}
-                and 5.5 years for{' '}
-                <a href="https://ibm.com" className="text-blue-500">
+                </a>, I participated in the development and maintenance of dashboards, reporting tools, and design systems implementations using React, TypeScript, Scala and C#. I also contributed to AI initiatives, the public Criteo Developers portal and the former Criteo Prestashop plugin.
+              </p>
+              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+                🧢 At <a href="https://ibm.com" className="text-blue-500">
                   <strong>IBM</strong>
-                </a>
-                . <br /> I&apos;m peruvian 🇵🇪 and based in Paris 🇫🇷 since 2020.
+                </a>, I contributed to the front-end software architecture for IBM Decision Advisor and delivered successful chatbot solutions using IBM Cloud and IBM Watson for government and banking industries innovating with social networks integrations like Facebook Messenger. Additionally, I developed the first SAP mobile apps in Perú using SAP Fiori and UI5.
+              </p>
+              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+                I&apos;m peruvian 🇵🇪 and based in Paris 🇫🇷 since 2020.
               </p>
               <div className="mt-6 flex gap-6">
                 <SocialLink
