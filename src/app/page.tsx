@@ -142,7 +142,12 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="/DANIEL_MAURICIO_FLORES-CV-October-2024.pdf" target="_blank" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="/DANIEL_MAURICIO_FLORES-CV-October-2024.pdf"
+        target="_blank"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -152,7 +157,13 @@ function Resume() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-  let alts: string[] = ['At Criteo, circa 10/2019.', 'At IBM Argentina, circa 2018.', 'At University of Lima, circa 2012.', 'At the Casino Paris, circa May 2024.', 'At Criteo, circa May 2024.'];
+  let alts: string[] = [
+    'At Criteo, circa 10/2019.',
+    'At IBM Argentina, circa 2018.',
+    'At University of Lima, circa 2012.',
+    'At the Casino Paris, circa May 2024.',
+    'At Criteo, circa May 2024.',
+  ]
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -193,24 +204,32 @@ export default async function Home() {
                 ex: CRITEO, IBM.
               </h2>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                🔮 Looking for new challenges around AI starting Q4 2024. Currently
-                working on personal projects around Generative AI, contributing to
-                open source projects on Github and studying for interviews; please, follow
-                me on Twitter as I try to build in public: <a  href="https://x.com/devniel/" aria-label="Follow me on Twitter" className="text-blue-500">@devniel</a>.
-              </p>
-              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">⎯</p>
-              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                Hi, I’m a product-oriented full-stack software engineer.
+                Hi, I’m a product-focused full-stack software engineer with a
+                generalist mindset, passionate about delivering innovative and
+                impactful solutions.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                🧢 At <a href="https://criteo.com" className="text-orange-500">
+                🧢 At{' '}
+                <a href="https://criteo.com" className="text-orange-500">
                   <strong>CRITEO</strong>
-                </a>, I participated in the development and maintenance of dashboards, reporting tools, and design systems implementations using React, TypeScript, Scala and C#. I also contributed to AI initiatives, the public Criteo Developers portal and the former Criteo Prestashop plugin.
+                </a>
+                , I participated in the development and maintenance of
+                dashboards, reporting tools, and design systems implementations
+                using React, TypeScript, Scala and C#. I also contributed to AI
+                initiatives, the public Criteo Developers portal and the former
+                Criteo Prestashop plugin.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                🧢 At <a href="https://ibm.com" className="text-blue-500">
+                🧢 At{' '}
+                <a href="https://ibm.com" className="text-blue-500">
                   <strong>IBM</strong>
-                </a>, I contributed to the front-end software architecture for IBM Decision Advisor and delivered successful chatbot solutions using IBM Cloud and IBM Watson for government and banking industries innovating with social networks integrations like Facebook Messenger. Additionally, I developed the first SAP mobile apps in Perú using SAP Fiori and UI5.
+                </a>
+                , I contributed to the front-end software architecture for IBM
+                Decision Advisor and delivered successful chatbot solutions
+                using IBM Cloud and IBM Watson for government and banking
+                industries innovating with social networks integrations like
+                Facebook Messenger. Additionally, I developed the first SAP
+                mobile apps in Perú using SAP Fiori and UI5.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 I&apos;m peruvian 🇵🇪 and based in Paris 🇫🇷 since 2020.
