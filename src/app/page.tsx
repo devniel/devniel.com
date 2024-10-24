@@ -142,7 +142,7 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="/DANIEL_MAURICIO_FLORES-CV-July-2024.pdf" target="_blank" variant="secondary" className="group mt-6 w-full">
+      <Button href="/DANIEL_MAURICIO_FLORES-CV-October-2024.pdf" target="_blank" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -220,11 +220,6 @@ export default async function Home() {
                   href="https://x.com/devniel/"
                   aria-label="Follow on X"
                   icon={XIcon}
-                />
-                <SocialLink
-                  href="https://www.instagram.com/devniel/"
-                  aria-label="Follow on Instagram"
-                  icon={InstagramIcon}
                 />
                 <SocialLink
                   href="https://github.com/devniel/"
