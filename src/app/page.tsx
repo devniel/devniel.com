@@ -143,7 +143,7 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="/DANIEL_MAURICIO_FLORES-CV-October-2024.pdf"
+        href="/DANIEL_MAURICIO_FLORES-CV-November-2024.pdf"
         target="_blank"
         variant="secondary"
         className="group mt-6 w-full"
@@ -204,32 +204,29 @@ export default async function Home() {
                 ex: CRITEO, IBM.
               </h2>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                Hi, I’m a product-focused full-stack software engineer with a
-                generalist mindset, passionate about delivering innovative and
-                impactful solutions.
+                10+ years of industry experience, full-stack software engineer,
+                tech-stack agnostic generalist with a product-oriented,
+                innovation-focused, and multi-project-driven mindset.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 🧢 At{' '}
                 <a href="https://criteo.com" className="text-orange-500">
                   <strong>CRITEO</strong>
                 </a>
-                , I participated in the development and maintenance of
-                dashboards, reporting tools, and design systems implementations
-                using React, TypeScript, Scala and C#. I also contributed to AI
-                initiatives, the public Criteo Developers portal and the former
-                Criteo Prestashop plugin.
+                , I developed dashboards, analytics tools and AI-powered
+                applications, implementing user interfaces and backend services
+                to aggregate advertising big data into interactive reporting
+                solutions allowing advertisers to make data-driven decisions.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 🧢 At{' '}
                 <a href="https://ibm.com" className="text-blue-500">
                   <strong>IBM</strong>
                 </a>
-                , I contributed to the front-end software architecture for IBM
-                Decision Advisor and delivered successful chatbot solutions
-                using IBM Cloud and IBM Watson for government and banking
-                industries innovating with social networks integrations like
-                Facebook Messenger. Additionally, I developed the first SAP
-                mobile apps in Perú using SAP Fiori and UI5.
+                , I developed SAP mobile and web applications, implemented
+                AI-powered chatbots with IBM Cloud, delivered dashboards for
+                multiple projects and earned a global IBM award for technical
+                volunteering work.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 I&apos;m peruvian 🇵🇪 and based in Paris 🇫🇷 since 2020.
