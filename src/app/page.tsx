@@ -285,12 +285,12 @@ export default async function Home() {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
             <Button
-              href="/projects"
+              href="/work"
               target="_blank"
               variant="secondary"
               className="group mt-6 w-full items-start"
             >
-              My current projects
+              My public work and experiments
               <LabIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
             </Button>
           </div>
