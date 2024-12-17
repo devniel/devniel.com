@@ -8,42 +8,23 @@ import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
+import imageContinuum from '@/images/projects/continuum.png'
+import imageIndexCraft from '@/images/projects/indexcraft.png'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'IndexCraft',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'A generative AI experiment using ComfyUI and Fal.ai to generate stickers based on prompts. Powererd by a Three.js canvas, we can play with the stickers and compose them into a scene.',
+    link: { href: 'https://indexcraft.devniel.com', label: 'indexcraft.devniel.com' },
+    image: imageIndexCraft
   },
   {
-    name: 'Animaginary',
+    name: 'Continuum',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
-  },
-  {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'A data visualization exercise using the deck.gl library to handle large datasets using WebGL. A task assignment of a past interview process.',
+    link: { href: 'https://continuum.devniel.com', label: 'continuum.devniel.com' },
+    image: imageContinuum
   },
 ]
 
@@ -60,14 +41,14 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Currently working on...',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Things I'm working on."
+      intro="A bit of experimentation for learning while having fun."
     >
       <ul
         role="list"
@@ -75,11 +56,11 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex w-full items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
-                src={project.logo}
+                src={project.image as any}
                 alt=""
-                className="h-8 w-8"
+                className="w-full"
                 unoptimized
               />
             </div>

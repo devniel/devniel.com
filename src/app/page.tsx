@@ -55,6 +55,38 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function LabIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M9 3L9 12.5L4.5 20.5C4.16667 21 4.5 21.5 5 21.5L19 21.5C19.5 21.5 19.8333 21 19.5 20.5L15 12.5L15 3"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+      <path
+        d="M7 3L17 3"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+      <path
+        d="M11.5 9L12.5 9"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+      <path
+        d="M10.5 6L13.5 6"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+
 function SocialLink({
   icon: Icon,
   ...props
@@ -252,6 +284,15 @@ export default async function Home() {
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
+            <Button
+              href="/projects"
+              target="_blank"
+              variant="secondary"
+              className="group mt-6 w-full items-start"
+            >
+              My current projects
+              <LabIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+            </Button>
           </div>
         </div>
       </Container>
