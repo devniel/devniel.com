@@ -23,7 +23,7 @@ const projects = [
   {
     name: 'Continuum',
     description:
-      'A data visualization exercise using the deck.gl library to handle large datasets using WebGL. A task assignment of a past interview process.',
+      'A data visualization exercise using the deck.gl library to handle large datasets using WebGL.',
     link: { href: 'https://continuum.devniel.com', label: 'continuum.devniel.com' },
     image: imageContinuum
   },
