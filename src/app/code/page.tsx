@@ -56,15 +56,19 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const metadata: Metadata = {
-  title: 'Work',
-  description: 'Currently working on...',
+  title: 'Code',
+  description: 'Currently learning about Generative AI and WebGL.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="My public work."
-      intro="My creations in the open internet, between complete projects, experiments and media creation for learning while having fun."
+      title="Let the hacking begin."
+      intro={
+        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          My demoable work in the open internet, between complete apps and experiments for learning while having fun. More projects are also available on my <a href="https://github.com/devniel" className="text-teal-500 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300">Github</a>.
+        </p>
+      }
     >
       <ul
         role="list"

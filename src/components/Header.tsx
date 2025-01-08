@@ -15,7 +15,6 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
-import backgroundImage from '@/images/background.jpg'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -122,11 +121,8 @@ function MobileNavigation(
         </div>
         <nav className="mt-6">
           <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-            <MobileNavItem href="/about">About</MobileNavItem>
-            <MobileNavItem href="/articles">Articles</MobileNavItem>
-            <MobileNavItem href="/projects">Projects</MobileNavItem>
-            <MobileNavItem href="/speaking">Speaking</MobileNavItem>
-            <MobileNavItem href="/uses">Uses</MobileNavItem>
+            <MobileNavItem href="/">About</MobileNavItem>
+            <MobileNavItem href="/code">Code</MobileNavItem>
           </ul>
         </nav>
       </PopoverPanel>
@@ -167,11 +163,12 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="/articles">Articles</NavItem>
-        <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/speaking">Speaking</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
+        <NavItem href="/">About</NavItem>
+        <NavItem href="/code">Code</NavItem>
+        {/*<NavItem href="/texts">Texts</NavItem>
+        <NavItem href="/illustrations">Illustrations</NavItem>
+        <NavItem href="/videography">Videography</NavItem>
+        <NavItem href="/photography">Photography</NavItem>*/}
       </ul>
     </nav>
   )
@@ -213,7 +210,7 @@ function AvatarContainer({
     <div
       className={clsx(
         className,
-        'h-32 w-32 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
+        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
       )}
       {...props}
     />
@@ -250,6 +247,7 @@ function Avatar({
 
 export function Header() {
   let isHomePage = usePathname() === '/'
+
   let headerRef = useRef<React.ElementRef<'div'>>(null)
   let avatarRef = useRef<React.ElementRef<'div'>>(null)
 
@@ -321,6 +319,17 @@ export function Header() {
             }}
           >
             <div className="relative flex gap-4">
+              <div className="flex flex-1">
+                {!isHomePage && (
+                  <AvatarContainer>
+                    <Avatar />
+                  </AvatarContainer>
+                )}
+              </div>
+              <div className="flex flex-1 justify-end md:justify-center">
+                <MobileNavigation className="pointer-events-auto md:hidden" />
+                <DesktopNavigation className="pointer-events-auto hidden md:block" />
+              </div>
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
                   <ThemeToggle />

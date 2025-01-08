@@ -164,7 +164,7 @@ function Resume() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-300 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
@@ -177,12 +177,21 @@ function Resume() {
       <Button
         href="/DANIEL_MAURICIO_FLORES-CV-November-2024.pdf"
         target="_blank"
-        variant="secondary"
+        variant="primary"
         className="group mt-6 w-full"
       >
         Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition  group-active:stroke-zinc-600  dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
+      <Button
+              href="/code"
+              target="_blank"
+              variant="primary"
+              className="group mt-3 w-full items-start"
+            >
+              Check out some of my work
+              <LabIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+            </Button>
     </div>
   )
 }
@@ -225,7 +234,7 @@ function Photos() {
 export default async function Home() {
   return (
     <>
-      <Container className="mt-24 md:mt-28">
+      <Container className="mt-14 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             <div className="max-w-2xl">
@@ -284,15 +293,6 @@ export default async function Home() {
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
-            <Button
-              href="/work"
-              target="_blank"
-              variant="secondary"
-              className="group mt-6 w-full items-start"
-            >
-              My public work and experiments
-              <LabIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-            </Button>
           </div>
         </div>
       </Container>
