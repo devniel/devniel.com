@@ -18,35 +18,35 @@ const projects = [
   {
     name: 'Devniel\'s Agent',
     description:
-      'A Retrieval-Augmented Generation (RAG) application about me built with OpenAI ChatGPT 4o, OpenAI Embeddings, FastAPI, Python, Next.js, TypeScript, Postgres, PgVector, and Docker.',
+      'A Retrieval-Augmented Generation (RAG) application about me built with OpenAI ChatGPT 4o, OpenAI Embeddings, FastAPI, Python, Next.js, TypeScript, Postgres, PgVector, Docker and hosted on Digital Ocean.',
     link: { href: 'https://chat.devniel.com', label: 'chat.devniel.com' },
     image: imageChat
   },
   {
     name: 'IndexCraft',
     description:
-      'A generative AI experiment using ComfyUI and Fal.ai to generate stickers based on prompts. Powererd by a Three.js canvas, we can play with the stickers and compose them into a scene.',
+      'An image editor based on stickers using ComfyUI, Fal.ai and GenAI models. Powererd by a Three.js canvas, we can play with imported or generated stickers and compose them into a scene. Created with FastAPI, Python, Next.js, TypeScript, Postgres, Docker and hosted on Digital Ocean and Runpod (GPUs cloud).',
     link: { href: 'https://indexcraft.devniel.com', label: 'indexcraft.devniel.com' },
     image: imageIndexCraft
   },
   {
     name: 'Continuum',
     description:
-      'A data visualization exercise using the deck.gl library to handle large datasets using WebGL.',
+      'A data visualization exercise using the deck.gl library to handle large datasets using WebGL. Created with Next.js TypeScript, FastAPI, Python, Docker and hosted on Digital Ocean.',
     link: { href: 'https://continuum.devniel.com', label: 'continuum.devniel.com' },
     image: imageContinuum
   },
   {
     name: 'Uploader',
     description:
-      'A resumable uploader using HTTP/2 request streaming, Go, Next.js, TailwindCSS, and Docker. Only works in Chrome because of the Streams API with the `half` duplex option.',
+      'A resumable uploader using HTTP/2 request streaming, Go, Next.js, TailwindCSS, and Docker. Only works in Chrome because of the Streams API with the `half` duplex option. Created with Go, Next.js, TailwindCSS, Docker and hosted on Digital Ocean.',
     link: { href: 'https://uploader.devniel.com', label: 'uploader.devniel.com' },
     image: imageUploader
   },
   {
     name: 'JZCie - Jesús Zambrano Compagnie',
     description:
-      'A web CMS app for a choral group to manage and share their content and events. Created with Strapi and Next.js.',
+      'A content management system for a choral group to manage and share their content including events, media, artists information and more. Created with Strapi, Next.js, TailwindCSS, Docker and hosted on Digital Ocean.',
     link: { href: 'https://jzcie.com', label: 'jzcie.com' },
     image: imageJZCie
   }
