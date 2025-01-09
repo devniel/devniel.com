@@ -12,6 +12,7 @@ import imageContinuum from '@/images/projects/continuum.png'
 import imageIndexCraft from '@/images/projects/indexcraft.png'
 import imageJZCie from '@/images/projects/jzcie.png'
 import imageChat from '@/images/projects/chat.png'
+import imageUploader from '@/images/projects/uploader.png'
 
 const projects = [
   {
@@ -34,6 +35,13 @@ const projects = [
       'A data visualization exercise using the deck.gl library to handle large datasets using WebGL.',
     link: { href: 'https://continuum.devniel.com', label: 'continuum.devniel.com' },
     image: imageContinuum
+  },
+  {
+    name: 'Uploader',
+    description:
+      'A resumable uploader using HTTP/2 request streaming, Go, Next.js, TailwindCSS, and Docker. Only works in Chrome because of the Streams API with the `half` duplex option.',
+    link: { href: 'https://uploader.devniel.com', label: 'uploader.devniel.com' },
+    image: imageUploader
   },
   {
     name: 'JZCie - Jesús Zambrano Compagnie',
