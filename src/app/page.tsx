@@ -12,12 +12,15 @@ import {
 } from '@/components/SocialIcons'
 import logoIBM from '@/images/logos/ibm.svg'
 import logoCriteo from '@/images/logos/criteo.svg'
+import logoRoundedBlack from '@/images/logos/rounded-black.png'
+import logoRoundedWhite from '@/images/logos/rounded-white.png'
 
-import image1 from '@/images/photos/image-1.jpg'
+import image1 from '@/images/photos/image-1.jpg'  
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
+import image6 from '@/images/photos/image-6.jpg'
 
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -106,6 +109,7 @@ interface Role {
   logo: ImageProps['src']
   start: string | { label: string; dateTime: string }
   end: string | { label: string; dateTime: string }
+  url?: string
 }
 
 function Role({ role }: { role: Role }) {
@@ -119,13 +123,13 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-white">
+        <Image src={role.logo} alt="" className="h-7 w-7 p-0.5" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
         <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-          {role.company}
+          <Link href={role.url ?? ''} target="_blank">{role.company}</Link>
         </dd>
         <dt className="sr-only">Role</dt>
         <dd className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -148,23 +152,33 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
+      company: 'Rounded',
+      title: 'Senior Software Engineer',
+      logo: logoRoundedBlack,
+      start: 'Jan 2025',
+      end: 'Present',
+      url: 'https://callrounded.com',
+    },
+    {
       company: 'CRITEO',
-      title: 'Software Engineer',
+      title: 'Software Engineer II',
       logo: logoCriteo,
-      start: 'January 2020',
-      end: 'June 2024',
+      start: 'Jan 2020',
+      end: 'Jun 2024',
+      url: 'https://criteo.com',
     },
     {
       company: 'IBM',
       title: 'Software Engineer',
       logo: logoIBM,
       start: 'May 2014',
-      end: 'December 2019',
+      end: 'Dec 2019',
+      url: 'https://ibm.com',
     },
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-300 p-6 dark:border-zinc-700/40">
+    <div className="p-6 dark:border-zinc-800 border-l-[1px] border-zinc-200">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
@@ -184,14 +198,14 @@ function Resume() {
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition  group-active:stroke-zinc-600  dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
       <Button
-              href="/code"
-              target="_blank"
-              variant="primary"
-              className="group mt-3 w-full items-start"
-            >
-              Check out some of my work
-              <LabIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-            </Button>
+        href="/code"
+        target="_blank"
+        variant="primary"
+        className="group mt-3 w-full items-start"
+      >
+        Check out some of my work
+        <LabIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+      </Button>
     </div>
   )
 }
@@ -209,7 +223,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image1, image2, image6, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -242,12 +256,20 @@ export default async function Home() {
                 Software Engineer
               </h1>
               <h2 className="text-1xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
-                ex: CRITEO, IBM.
+                @Rounded ⎯ ex: CRITEO, IBM.
               </h2>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 10+ years of industry experience, full-stack software engineer,
                 tech-stack agnostic generalist with a product-oriented,
                 innovation-focused, and multi-project-driven mindset.
+              </p>
+              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+                🧢 At{' '}
+                <a href="https://callrounded.com" className="text-white">
+                  <strong>Rounded</strong>
+                </a>
+                , we are developing a platform to build, test, deploy and monitor AI vocal agents via web or phonecalls.
+
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 🧢 At{' '}
