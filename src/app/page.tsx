@@ -8,7 +8,6 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from '@/components/SocialIcons'
 import logoIBM from '@/images/logos/ibm.svg'
 import logoCriteo from '@/images/logos/criteo.svg'
@@ -57,38 +56,6 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     </svg>
   )
 }
-
-function LabIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M9 3L9 12.5L4.5 20.5C4.16667 21 4.5 21.5 5 21.5L19 21.5C19.5 21.5 19.8333 21 19.5 20.5L15 12.5L15 3"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-      <path
-        d="M7 3L17 3"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-      <path
-        d="M11.5 9L12.5 9"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-      <path
-        d="M10.5 6L13.5 6"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
 
 function SocialLink({
   icon: Icon,
@@ -189,22 +156,13 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="/DANIEL_MAURICIO_FLORES-CV-November-2024.pdf"
+        href="/DANIEL_MAURICIO_FLORES-CV-September-2026.pdf"
         target="_blank"
         variant="primary"
         className="group mt-6 w-full"
       >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition  group-active:stroke-zinc-600  dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
-      <Button
-        href="/code"
-        target="_blank"
-        variant="primary"
-        className="group mt-3 w-full items-start"
-      >
-        Check out some of my work
-        <LabIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
@@ -259,16 +217,17 @@ export default async function Home() {
                 @Rounded ⎯ ex: CRITEO, IBM.
               </h2>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                10+ years of industry experience, full-stack software engineer,
-                tech-stack agnostic generalist with a product-oriented,
-                innovation-focused, and multi-project-driven mindset.
+                12+ years of industry experience, tech-stack agnostic generalist
+                with a product-oriented, innovative, systems-thinking mindset.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 🧢 At{' '}
-                <a href="https://callrounded.com" className="text-white">
+                <a href="https://callrounded.com" className="text-zinc-900 dark:text-white">
                   <strong>Rounded</strong>
                 </a>
-                , we are developing a platform to build, test, deploy and monitor AI vocal agents via web or phonecalls.
+                , I work end-to-end across voice AI solutions, agentic systems,
+                backend platforms and cloud infrastructure, from architecture
+                through deployment, scaling and operations.
 
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
@@ -277,29 +236,21 @@ export default async function Home() {
                   <strong>CRITEO</strong>
                 </a>
                 , I developed dashboards, analytics tools and AI-powered
-                applications, implementing user interfaces and backend services
-                to aggregate advertising big data into interactive reporting
-                solutions allowing advertisers to make data-driven decisions.
+                applications that helped advertisers make data-driven decisions.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 🧢 At{' '}
                 <a href="https://ibm.com" className="text-blue-500">
                   <strong>IBM</strong>
                 </a>
-                , I developed SAP mobile and web applications, implemented
-                AI-powered chatbots with IBM Cloud, delivered dashboards for
-                multiple projects and earned a global IBM award for technical
-                volunteering work.
+                , I developed AI-powered chatbots, SAP mobile and web
+                applications, dashboards and earned a global IBM award for
+                technical volunteering work.
               </p>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 I&apos;m peruvian 🇵🇪 and based in Paris 🇫🇷 since 2020.
               </p>
               <div className="mt-6 flex gap-6">
-                <SocialLink
-                  href="https://x.com/devniel/"
-                  aria-label="Follow on X"
-                  icon={XIcon}
-                />
                 <SocialLink
                   href="https://github.com/devniel/"
                   aria-label="Follow on GitHub"
